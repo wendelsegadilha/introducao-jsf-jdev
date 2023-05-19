@@ -7,15 +7,17 @@
 <h:body>
 
 	<h:form id="formPessoa">
-		<h:outputLabel value="Nome: "/>
 		<h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
+		<h:commandButton value="Adicionar nome" action="#{pessoaBean.addNome}"/>
+		
 			<br/>
-		<h:outputLabel value="Sobrenome: "/>
-		<h:inputText id="campoSobrenome" value="#{pessoaBean.sobrenome}"/>
-			<br/>
-		<h:outputText value="#{pessoaBean.nomeCompleto}"/>
-			<br/>
-		<h:commandButton value="Enviar" action="#{pessoaBean.mostrarNomeCompleto}"/>
+			
+		<h:dataTable value="#{pessoaBean.nomes}" var="nome">
+			<h:column>
+				<h:outputText value="#{nome}"/>
+			</h:column>
+		</h:dataTable>
+			
 	</h:form>
 	
 </h:body>
