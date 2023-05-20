@@ -5,7 +5,8 @@
 	<title>Olá JSF</title>
 	<script type="text/javascript">
 		function alertar(){
-			alert('JSF');
+			var elemento = document.getElementById('formPessoa:lblTeste');
+			elemento.value = "Wendel";
 		}
 	</script>
 </h:head>
@@ -13,6 +14,7 @@
 
 	<h:form id="formPessoa">
 		<h1>Olá Mundo JSF</h1>
+		<h:outputLabel value="Teste" id="lblTeste"/>
 		<h:commandButton value="Navegar" action="primeirapagina"/>	
 		<br/>
 		<h:commandLink value="Alerta" onclick="alertar();"/>		
