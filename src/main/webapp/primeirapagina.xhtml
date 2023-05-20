@@ -8,7 +8,7 @@
 
 	<h:form id="formPessoa">
 		<h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
-		<h:commandButton value="Adicionar nome" action="#{pessoaBean.addNome}"/>
+		<h:commandButton binding="#{pessoaBean.commandButton}" value="Adicionar nome" action="#{pessoaBean.addNome}"/>
 		
 			<br/>
 			
