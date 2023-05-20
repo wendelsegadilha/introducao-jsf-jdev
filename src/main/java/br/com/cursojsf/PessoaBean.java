@@ -15,6 +15,25 @@ public class PessoaBean {
 	private List<String> nomes = new ArrayList<>();
 	private HtmlCommandButton commandButton;
 	
+	private String senha;
+	private String texto;
+	
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -41,6 +60,13 @@ public class PessoaBean {
 			commandButton.setDisabled(true);
 			return "paginanavegada?faces-redirect=true"; //retorna para a paginanavegada (URL)
 		}
+		return ""; //null ou vazio fica na mesma página
+	}
+	
+	public String entrada() {
+		System.out.println(nome);
+		System.out.println(senha);
+		System.out.println(this.texto);
 		return ""; //null ou vazio fica na mesma página
 	}
 	

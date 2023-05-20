@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta charset="utf-8" />
+	<title>Olá JSF</title>
+	<script type="text/javascript">
+		function alertar(){
+			var elemento = document.getElementById('formPessoa:lblTeste');
+			elemento.value = "Wendel";
+		}
+	</script>
+</h:head>
+<h:body>
+
+	<h:form id="formPessoa">
+			
+		<h:outputLabel value="Nome: "/>	
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
+		<h:outputLabel value="Senha: "/>	
+		<h:inputSecret id="campoSenha" value="#{pessoaBean.senha}"/>
+		<h:outputLabel value="Texto: "/>
+		<h:inputTextarea id="campoTexto" value="#{pessoaBean.texto}"/>	
+		
+		<h:commandButton value="Adicionar" action="#{pessoaBean.entrada}"/>	
+			
+	</h:form>
+	
+</h:body>
+</html>
